@@ -1,0 +1,1247 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ebook: Do Zero ao Lucro — Como Criar, Hospedar e Vender Sites com Ajuda da IA</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Playfair+Display:wght@700&display=swap');
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.8;
+            color: #2d3748;
+            max-width: 21cm;
+            margin: 0 auto;
+            padding: 2cm;
+            background: #fdfdfd; /* Fundo off-white para leitura confortável */
+            font-size: 12pt;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            margin-top: 1.5em;
+            margin-bottom: 0.5em;
+            line-height: 1.3;
+        }
+
+        h1 {
+            font-size: 28pt;
+            text-align: center;
+            color: #2c5282; /* Azul escuro elegante */
+            margin-bottom: 0.3em;
+            border-bottom: 4px solid #4299e1;
+            padding-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 20pt;
+            border-left: 5px solid #4299e1;
+            padding-left: 15px;
+            background-color: #ebf8ff; /* Azul claro suave */
+            color: #2c5282;
+        }
+
+        h3 {
+            font-size: 16pt;
+            color: #2c5282;
+        }
+
+        h4 {
+            font-size: 14pt;
+            color: #3182ce;
+            margin-bottom: 0.3em;
+        }
+
+        p {
+            margin-bottom: 1em;
+            text-align: justify;
+            color: #2d3748; /* Cinza escuro para melhor contraste */
+        }
+
+        .cover {
+            text-align: center;
+            padding: 4cm 2cm;
+            background: linear-gradient(135deg, #ebf8ff 0%, #f7fafc 100%);
+            border-radius: 15px;
+            margin-bottom: 2cm;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            color: #2d3748;
+        }
+
+        .cover h1 {
+            font-size: 36pt;
+            margin-bottom: 0.5em;
+            color: #2c5282;
+        }
+
+        .cover h2 {
+            font-size: 22pt;
+            font-weight: 400;
+            color: #4a5568;
+            border: none;
+            background: transparent;
+            padding: 0;
+        }
+
+        .author {
+            font-style: italic;
+            margin-top: 2em;
+            font-size: 14pt;
+            color: #4a5568;
+        }
+
+        .subtitle {
+            font-size: 18pt;
+            color: #2c5282;
+            margin: 1em 0;
+            font-weight: 700;
+        }
+
+        .toc {
+            background-color: #f7fafc;
+            padding: 25px;
+            border-radius: 12px;
+            margin: 2em 0;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+        }
+
+        .toc h2 {
+            margin-top: 0;
+            background: transparent;
+            border: none;
+            padding: 0;
+            color: #2c5282;
+        }
+
+        .toc ul {
+            padding-left: 20px;
+        }
+
+        .toc li {
+            margin-bottom: 10px;
+            list-style-type: none;
+            padding: 5px 0;
+        }
+
+        .toc li:before {
+            content: "• ";
+            color: #4299e1;
+            font-weight: bold;
+        }
+
+        .checklist, .faq, .script, .model {
+            background-color: #ebf8ff;
+            border-left: 4px solid #4299e1;
+            padding: 20px;
+            margin: 2em 0;
+            border-radius: 0 10px 10px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .tip {
+            background-color: #fefcbf;
+            border-left: 4px solid #f6ad55;
+            padding: 20px;
+            margin: 2em 0;
+            border-radius: 0 10px 10px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .warning {
+            background-color: #fff5f5;
+            border-left: 4px solid #e53e3e;
+            padding: 20px;
+            margin: 2em 0;
+            border-radius: 0 10px 10px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .success {
+            background-color: #f0fff4;
+            border-left: 4px solid #38a169;
+            padding: 20px;
+            margin: 2em 0;
+            border-radius: 0 10px 10px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2em 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            border-radius: 10px;
+            overflow: hidden;
+            background: white;
+        }
+
+        th, td {
+            padding: 14px 18px;
+            text-align: left;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        th {
+            background-color: #ebf8ff;
+            font-weight: 700;
+            color: #2c5282;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f7fafc;
+        }
+
+        tr:hover {
+            background-color: #ebf8ff;
+        }
+
+        .summary {
+            background-color: #e6fffa;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 2em 0;
+            border: 1px solid #9decf9;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .summary h4 {
+            margin-top: 0;
+            color: #2c5282;
+        }
+
+        .page-break {
+            page-break-before: always;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 3em;
+            padding-top: 1.5em;
+            border-top: 2px solid #e2e8f0;
+            font-size: 10pt;
+            color: #718096;
+            background: #f7fafc;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .highlight {
+            background-color: #fef3c7;
+            padding: 3px 6px;
+            border-radius: 4px;
+            font-weight: 700;
+            color: #9c4221;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .cta {
+            text-align: center;
+            background: linear-gradient(135deg, #3182ce, #2c5282);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 3em 0;
+            box-shadow: 0 5px 20px rgba(49, 130, 206, 0.2);
+        }
+
+        .cta h2 {
+            color: white;
+            border: none;
+            background: transparent;
+            margin-top: 0;
+        }
+
+        .bonus {
+            background: linear-gradient(135deg, #f0fff4, #e6fffa);
+            border: 2px dashed #38a169;
+            padding: 25px;
+            border-radius: 15px;
+            margin: 3em 0;
+            box-shadow: 0 3px 10px rgba(56, 161, 105, 0.1);
+        }
+
+        code {
+            background-color: #f7fafc;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', Courier, monospace;
+            color: #2d3748;
+            border: 1px solid #e2e8f0;
+        }
+
+        pre {
+            background-color: #f7fafc;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+            border: 1px solid #e2e8f0;
+            margin: 15px 0;
+        }
+
+        @media print {
+            body {
+                padding: 1cm;
+                background: white;
+            }
+            .no-print {
+                display: none;
+            }
+        }
+
+        .no-print {
+            text-align: center;
+            margin: 2em 0;
+            padding: 15px;
+            background-color: #edf2f7;
+            border-radius: 8px;
+            font-weight: bold;
+            color: #4a5568;
+            border: 1px solid #e2e8f0;
+        }
+
+        a {
+            color: #3182ce;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #2c5282;
+        }
+
+        ul, ol {
+            margin-left: 1.5em;
+            margin-bottom: 1em;
+        }
+
+        li {
+            margin-bottom: 0.5em;
+        }
+    </style>
+</head>
+<body>
+    <div class="cover">
+        <h1>DO ZERO AO LUCRO</h1>
+        <h2>Como Criar, Hospedar e Vender Sites com Ajuda da IA</h2>
+        <p class="subtitle">Manual Prático Passo a Passo para Iniciantes</p>
+        <p class="author">Por: Seu Especialista em IA + Vendas Digitais</p>
+    </div>
+
+    <div class="toc">
+        <h2>📌 SUMÁRIO</h2>
+        <ul>
+            <li><strong>Introdução</strong> — Por Que Este eBook Vai Mudar Seu Futuro Digital</li>
+            <li><strong>Capítulo 1</strong> — Oportunidade de Mercado</li>
+            <li><strong>Capítulo 2</strong> — Ferramentas de IA para Criação de Sites</li>
+            <li><strong>Capítulo 3</strong> — Criando um Site Passo a Passo</li>
+            <li><strong>Capítulo 4</strong> — Hospedando o Site</li>
+            <li><strong>Capítulo 5</strong> — Conectando um Domínio</li>
+            <li><strong>Capítulo 6</strong> — Preparando a Entrega para o Cliente</li>
+            <li><strong>Capítulo 7</strong> — Como Vender o Site para Clientes</li>
+            <li><strong>Capítulo 8</strong> — Pós-Venda e Escala</li>
+            <li><strong>Bônus</strong> — Modelos Prontos + FAQs + Cronograma de 15 Dias</li>
+            <li><strong>Conclusão</strong> — Próximos Passos e Dicas de Vendas</li>
+        </ul>
+    </div>
+
+    <div class="no-print">
+        <p>✅ Este documento está formatado para impressão em PDF. No seu navegador, vá em "Arquivo" > "Imprimir" > "Salvar como PDF".</p>
+    </div>
+
+    <h1>🌟 INTRODUÇÃO — Por Que Este eBook Vai Mudar Seu Futuro Digital</h1>
+    <p>Você já imaginou ganhar seu primeiro R$1.000, R$3.000 ou até R$10.000 por mês criando sites — sem precisar ser programador?</p>
+    <p>Pois é. Hoje, qualquer pessoa com um celular e vontade de aprender pode entrar no mercado digital e vender sites profissionais — <strong>usando inteligência artificial como sua principal aliada</strong>.</p>
+    <p>A IA não veio para substituir você. Veio para te dar <strong>superpoderes</strong>: gerar textos, criar layouts, montar códigos, sugerir cores, até escrever propostas de vendas. Tudo isso em minutos.</p>
+    <p>E o melhor? O mercado está faminto por sites. Pequenos negócios, lojistas, professores, nutricionistas, cabeleireiros — todos precisam de um site profissional, mas não sabem por onde começar. E é aí que você entra.</p>
+    <p>Este eBook é um <strong>manual prático, passo a passo</strong>, feito para iniciantes. Vamos do zero (sem conhecimento técnico) até a entrega do site e recebimento do pagamento. Tudo com exemplos reais, checklists, scripts de vendas e modelos prontos para você copiar e colar.</p>
+    <p>Vamos juntos transformar sua ideia em lucro?</p>
+
+    <h2>📈 CAPÍTULO 1 — Oportunidade de Mercado</h2>
+    <h3>Por que vender sites é um bom negócio hoje?</h3>
+    <p><em>“Todo negócio precisa de um site. Mas 70% dos pequenos negócios no Brasil ainda não têm um.”</em> — Fonte: Sebrae 2024</p>
+    <p>Isso significa <strong>oportunidade real</strong>. São milhões de potenciais clientes: lojas de bairro, consultórios, academias, artesãos, coaches...</p>
+    <p>Eles não querem sites complexos. Querem algo <strong>bonito, funcional, rápido de fazer e barato</strong> — exatamente o que você vai entregar com IA.</p>
+    <p>Além disso, muitos já têm Instagram, mas sabem que <strong>o site é o cartão de visitas profissional</strong> — onde o cliente confia, agenda, compra, entra em contato.</p>
+
+    <div class="tip">
+        <strong>💡 Exemplo prático:</strong><br>
+        Cliente: Dona Marta, dona de uma confeitaria caseira.<br>
+        Problema: Só vende por WhatsApp, perde clientes que não salvam o número.<br>
+        Solução: Site com cardápio, fotos dos bolos, formulário de contato e botão do WhatsApp.<br>
+        Preço cobrado: R$ 897 (à vista via Pix).<br>
+        Tempo de entrega: 5 dias.<br>
+        Lucro para você: R$ 897 (custo quase zero).
+    </div>
+
+    <h3>Como a IA pode acelerar o processo?</h3>
+    <p>Antes, criar um site exigia:</p>
+    <ul>
+        <li>Saber HTML, CSS, JavaScript</li>
+        <li>Contratar designer</li>
+        <li>Escrever textos do zero</li>
+        <li>Testar em vários dispositivos</li>
+    </ul>
+    <p>Hoje, com IA:</p>
+    <p>✅ Gera layout em 1 minuto (Wix AI, Framer AI)<br>
+    ✅ Escreve textos profissionais (ChatGPT)<br>
+    ✅ Cria imagens personalizadas (Canva + MidJourney)<br>
+    ✅ Corrige código automaticamente (GitHub Copilot, ChatGPT)</p>
+    <p>Você vira um <strong>“diretor de criação digital”</strong> — não precisa fazer tudo, só supervisionar e aprovar o que a IA gera.</p>
+
+    <h3>Quem são os clientes ideais?</h3>
+    <p>Clientes ideais são:</p>
+    <ul>
+        <li><strong>Pequenos negócios locais</strong> (padarias, pet shops, oficinas)</li>
+        <li><strong>Profissionais liberais</strong> (psicólogos, advogados, designers)</li>
+        <li><strong>Empreendedores digitais</strong> (coaches, infoprodutores, youtubers)</li>
+        <li><strong>Artistas e artesãos</strong> (pintores, ceramistas, músicos)</li>
+    </ul>
+    <p>Eles têm 3 características em comum:</p>
+    <ol>
+        <li>Precisam de mais clientes</li>
+        <li>Não sabem mexer em tecnologia</li>
+        <li>Pagam por soluções simples e rápidas</li>
+    </ol>
+
+    <div class="checklist">
+        <h4>✅ Checklist: Seu cliente ideal tem...</h4>
+        <ul>
+            <li>[ ] Negócio ativo (físico ou digital)</li>
+            <li>[ ] Presença em redes sociais (mesmo que básica)</li>
+            <li>[ ] Orçamento entre R$ 500 e R$ 3.000</li>
+            <li>[ ] Dificuldade em se organizar online</li>
+        </ul>
+    </div>
+
+    <div class="summary">
+        <h4>🎯 RESUMO RÁPIDO — CAPÍTULO 1</h4>
+        <ul>
+            <li>Vender sites é lucrativo porque <strong>9 em 10 pequenos negócios precisam e não têm</strong>.</li>
+            <li>A IA <strong>reduz seu tempo de produção de dias para horas</strong> — e aumenta sua margem de lucro.</li>
+            <li>Foque em <strong>clientes simples, com orçamento definido e urgência por resultado</strong>.</li>
+        </ul>
+    </div>
+
+    <h2>🧠 CAPÍTULO 2 — Ferramentas de IA para Criação de Sites</h2>
+    <h3>Ferramentas que você vai usar (todas com versão gratuita ou barata)</h3>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Ferramenta</th>
+                <th>Para que serve</th>
+                <th>Custo inicial</th>
+                <th>Link</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Wix ADI (Artificial Design Intelligence)</strong></td>
+                <td>Cria site completo com IA em 2 minutos</td>
+                <td>Grátis (plano básico)</td>
+                <td><a href="https://www.wix.com" target="_blank">wix.com</a></td>
+            </tr>
+            <tr>
+                <td><strong>Framer AI</strong></td>
+                <td>Gera site inteiro a partir de um prompt</td>
+                <td>Grátis (até 3 projetos)</td>
+                <td><a href="https://www.framer.com" target="_blank">framer.com</a></td>
+            </tr>
+            <tr>
+                <td><strong>ChatGPT (GPT-4)</strong></td>
+                <td>Gera textos, códigos, propostas, scripts</td>
+                <td>Grátis (GPT-3.5) ou R$ 42/mês (GPT-4)</td>
+                <td><a href="https://chat.openai.com" target="_blank">chat.openai.com</a></td>
+            </tr>
+            <tr>
+                <td><strong>Canva Magic Design</strong></td>
+                <td>Cria banners, logos, ícones com IA</td>
+                <td>Grátis</td>
+                <td><a href="https://www.canva.com" target="_blank">canva.com</a></td>
+            </tr>
+            <tr>
+                <td><strong>MidJourney (via Discord)</strong></td>
+                <td>Gera imagens realistas para o site</td>
+                <td>US$ 10/mês</td>
+                <td><a href="https://www.midjourney.com" target="_blank">midjourney.com</a></td>
+            </tr>
+            <tr>
+                <td><strong>10Web.io</strong></td>
+                <td>Transforma qualquer site em WordPress com IA</td>
+                <td>Teste grátis</td>
+                <td><a href="https://www.10web.io" target="_blank">10web.io</a></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="tip">
+        <strong>💡 Dica:</strong> Comece com Wix + ChatGPT + Canva. É suficiente para entregar 90% dos sites que seus clientes pedem.
+    </div>
+
+    <h3>Como gerar layout, textos e imagens com IA — Passo a Passo</h3>
+
+    <h4>🖼️ PASSO 1: Gerar layout com IA</h4>
+    <p><strong>Ferramenta:</strong> Wix ADI ou Framer AI</p>
+    <ol>
+        <li>Acesse <a href="https://www.wix.com" target="_blank">wix.com</a> → “Criar site” → “Usar IA”</li>
+        <li>Responda: “Qual o tipo de negócio?” (ex: “confeitaria caseira”)</li>
+        <li>Escolha estilo: “Moderno”, “Elegante”, “Divertido”</li>
+        <li>A IA gera 3 opções de layout em 30 segundos</li>
+        <li>Escolha uma, edite cores e fontes (arrasta e solta)</li>
+    </ol>
+
+    <div class="tip">
+        <strong>✅ Exemplo:</strong> “Crie um site para uma loja de roupas fitness feminina, com fundo rosa e fotos de modelos sorrindo.”
+    </div>
+
+    <h4>✍️ PASSO 2: Gerar textos com IA</h4>
+    <p><strong>Ferramenta:</strong> ChatGPT</p>
+    <p><strong>Prompt mágico:</strong></p>
+    <p><em>“Escreva um texto profissional para a página inicial de um site de [TIPO DE NEGÓCIO]. Inclua:<br>
+    - Boas-vindas<br>
+    - Diferenciais (3 pontos)<br>
+    - Chamada para ação (ex: ‘Agende agora!’)<br>
+    - Tom: [amigável/profissional/descontraído]”</em></p>
+
+    <div class="tip">
+        <strong>✅ Exemplo de saída:</strong><br>
+        “Bem-vinda à FitStyle! Aqui, cada peça foi pensada para valorizar seu corpo e sua autoestima.<br>
+        ✅ Tecidos respiráveis e confortáveis<br>
+        ✅ Modelagem que acompanha seus movimentos<br>
+        ✅ Estampas exclusivas feitas por designers brasileiros<br>
+        Pronta para arrasar? Escolha sua peça favorita e compre com 10% OFF na primeira compra!”
+    </div>
+
+    <h4>🎨 PASSO 3: Gerar imagens com IA</h4>
+    <p><strong>Ferramenta:</strong> Canva Magic Design ou MidJourney</p>
+    <p>No Canva:</p>
+    <ol>
+        <li>Abra um novo projeto → “Magic Design”</li>
+        <li>Digite: “Banner para site de nutricionista, fundo verde claro, mulher sorrindo segurando salada”</li>
+        <li>A IA gera 5 opções → escolha e edite texto</li>
+    </ol>
+    <p>No MidJourney (via Discord):</p>
+    <ol>
+        <li>Entre no servidor do MidJourney</li>
+        <li>Digite: <code>/imagine prompt: professional photo of a smiling female nutritionist holding salad, light green background, soft lighting, website banner --v 6</code></li>
+        <li>Baixe a imagem e use no site</li>
+    </ol>
+
+    <div class="tip">
+        <strong>💡 Dica:</strong> Sempre gere imagens com “website banner”, “professional”, “soft lighting” para resultados mais comerciais.
+    </div>
+
+    <div class="checklist">
+        <h4>✅ Checklist: Ferramentas que você precisa ter instaladas HOJE</h4>
+        <ul>
+            <li>[ ] Conta no Wix ou Framer</li>
+            <li>[ ] Conta no ChatGPT (OpenAI)</li>
+            <li>[ ] Conta no Canva</li>
+            <li>[ ] Acesso ao MidJourney (opcional, mas vale a pena)</li>
+            <li>[ ] Conta no 10Web (se for usar WordPress)</li>
+        </ul>
+    </div>
+
+    <div class="summary">
+        <h4>🎯 RESUMO RÁPIDO — CAPÍTULO 2</h4>
+        <ul>
+            <li>Use <strong>Wix ADI ou Framer AI</strong> para gerar layout em minutos.</li>
+            <li>Use <strong>ChatGPT</strong> para escrever textos profissionais com prompts simples.</li>
+            <li>Use <strong>Canva + MidJourney</strong> para criar imagens impactantes sem designer.</li>
+        </ul>
+    </div>
+
+    <h2>🛠️ CAPÍTULO 3 — Criando um Site Passo a Passo</h2>
+    <h3>Estrutura básica (páginas essenciais)</h3>
+    <p>Todo site profissional precisa ter, no mínimo:</p>
+    <ol>
+        <li><strong>Página Inicial (Home)</strong> — Apresentação + chamada para ação</li>
+        <li><strong>Sobre</strong> — Quem é você / sua empresa</li>
+        <li><strong>Serviços ou Produtos</strong> — O que você oferece</li>
+        <li><strong>Contato</strong> — Formulário + WhatsApp + localização (se for físico)</li>
+        <li><strong>Blog (opcional)</strong> — Para SEO e autoridade</li>
+    </ol>
+
+    <div class="tip">
+        <strong>💡 Dica:</strong> Nunca entregue um site sem página de contato. É onde o cliente converte!
+    </div>
+
+    <h3>Como pedir para a IA gerar HTML/CSS ou usar construtores inteligentes</h3>
+    <p>Você <strong>NÃO PRECISA</strong> escrever código. Mas se quiser personalizar algo, o ChatGPT faz por você.</p>
+
+    <h4>🧩 Exemplo: Pedir código para botão animado</h4>
+    <p><strong>Prompt no ChatGPT:</strong></p>
+    <p><em>“Gere um código HTML e CSS para um botão redondo, cor rosa, com efeito de sombra ao passar o mouse. Texto: ‘Fale com a gente’. Deve abrir o WhatsApp ao clicar.”</em></p>
+
+    <div class="tip">
+        <strong>✅ Saída (você copia e cola no Wix/WordPress como código embutido):</strong><br>
+        <pre><a href="https://wa.me/5511999999999" style="display:inline-block; padding:15px 30px; background:#ff69b4; color:white; border-radius:50px; text-decoration:none; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: all 0.3s ease;" onmouseover="this.style.boxShadow='0 6px 12px rgba(0,0,0,0.2)'" onmouseout="this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)'">Fale com a gente</a></pre>
+    </div>
+
+    <div class="tip">
+        <strong>✅ Funciona em qualquer construtor que aceite “código HTML embutido”.</strong>
+    </div>
+
+    <h3>Checklist de conteúdo necessário do cliente</h3>
+    <p>Antes de começar, peça ao cliente:</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th>Obrigatório?</th>
+                <th>Exemplo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Logo da empresa</td>
+                <td>Sim</td>
+                <td>PNG transparente</td>
+            </tr>
+            <tr>
+                <td>Texto sobre a empresa</td>
+                <td>Sim</td>
+                <td>“Há 5 anos transformando sorrisos...”</td>
+            </tr>
+            <tr>
+                <td>Fotos dos produtos/serviços</td>
+                <td>Sim</td>
+                <td>5 fotos em alta resolução</td>
+            </tr>
+            <tr>
+                <td>Contatos (WhatsApp, e-mail, endereço)</td>
+                <td>Sim</td>
+                <td>(11) 99999-9999</td>
+            </tr>
+            <tr>
+                <td>Cores preferidas</td>
+                <td>Não (mas ajuda)</td>
+                <td>“Azul e dourado”</td>
+            </tr>
+            <tr>
+                <td>Inspirações (sites que gosta)</td>
+                <td>Não</td>
+                <td>Link de outro site</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="script">
+        <h4>📝 Modelo de mensagem para enviar ao cliente:</h4>
+        <p>“Oi [Nome]! Para começar seu site, preciso de:<br>
+        ✅ Logo da empresa (em PNG)<br>
+        ✅ 5 fotos dos seus produtos/serviços<br>
+        ✅ Texto sobre você (pode ser um áudio que eu transcrevo!)<br>
+        ✅ Seu WhatsApp e e-mail<br>
+        Manda quando puder — em 48h te mostro a primeira versão!”</p>
+    </div>
+
+    <div class="checklist">
+        <h4>✅ Checklist: Antes de publicar o site</h4>
+        <ul>
+            <li>[ ] Todas as páginas criadas (Home, Sobre, Serviços, Contato)</li>
+            <li>[ ] Botão de WhatsApp funcionando</li>
+            <li>[ ] Formulário de contato testado</li>
+            <li>[ ] Imagens otimizadas (não pesadas)</li>
+            <li>[ ] Textos revisados (sem erros de português)</li>
+            <li>[ ] Versão mobile testada (abrir no celular)</li>
+        </ul>
+    </div>
+
+    <div class="summary">
+        <h4>🎯 RESUMO RÁPIDO — CAPÍTULO 3</h4>
+        <ul>
+            <li>Estrutura básica: <strong>Home, Sobre, Serviços, Contato</strong>.</li>
+            <li>Use <strong>ChatGPT para gerar código</strong> se precisar de elementos personalizados.</li>
+            <li>Nunca comece sem o <strong>checklist de conteúdo do cliente</strong> — evita retrabalho.</li>
+        </ul>
+    </div>
+
+    <h2>🌐 CAPÍTULO 4 — Hospedando o Site</h2>
+    <h3>O que é hospedagem e como funciona?</h3>
+    <p><strong>Hospedagem é o “aluguel de um computador na internet” onde seu site fica armazenado e acessível 24h.</strong></p>
+    <p>Sem hospedagem, seu site só existe no seu computador — ninguém mais vê.</p>
+
+    <h3>Passo a passo para usar hospedagens simples</h3>
+
+    <h4>Opção 1: <strong>Netlify (grátis para sites estáticos)</strong></h4>
+    <p>Ideal para sites feitos com HTML, CSS, JS (ou exportados do Framer/Wix).</p>
+    <ol>
+        <li>Acesse <a href="https://www.netlify.com" target="_blank">netlify.com</a> → “Sign Up”</li>
+        <li>Arraste a pasta do seu site (ou conecte ao GitHub)</li>
+        <li>Clique em “Deploy site”</li>
+        <li>Pronto! Seu site ganha um link como: <code>meusite.netlify.app</code></li>
+    </ol>
+
+    <div class="success">
+        <strong>✅ Grátis, rápido, sem burocracia.</strong>
+    </div>
+
+    <h4>Opção 2: <strong>Hostinger (paga, mas completa)</strong></h4>
+    <p>Ideal se for usar WordPress ou quiser domínio próprio desde o início.</p>
+    <ol>
+        <li>Acesse <a href="https://www.hostinger.com.br" target="_blank">hostinger.com.br</a></li>
+        <li>Escolha plano “Single Shared Hosting” (R$ 9,99/mês na promoção)</li>
+        <li>Cadastre-se e pague</li>
+        <li>Instale WordPress com 1 clique (ou envie seus arquivos via FTP)</li>
+        <li>Acesse seu site pelo link temporário</li>
+    </ol>
+
+    <div class="tip">
+        <strong>💡 Dica:</strong> Use Hostinger se o cliente quer e-mail profissional (ex: contato@empresa.com.br).
+    </div>
+
+    <h3>Como enviar os arquivos do site para o servidor</h3>
+    <p>Se você usou Wix/Framer, <strong>não precisa enviar arquivos</strong> — eles hospedam pra você.</p>
+    <p>Se fez site do zero (HTML/CSS):</p>
+    <ol>
+        <li>Compacte a pasta do site (index.html, css/, img/) em um .ZIP</li>
+        <li>No Netlify: arraste o .ZIP na tela inicial</li>
+        <li>No Hostinger: use o “Gerenciador de Arquivos” ou FTP (FileZilla)</li>
+    </ol>
+
+    <div class="tip">
+        <strong>✅ Ferramenta grátis para FTP:</strong> <strong>FileZilla</strong> (baixe em <a href="https://filezilla-project.org" target="_blank">filezilla-project.org</a>)
+    </div>
+
+    <div class="checklist">
+        <h4>✅ Checklist: Escolha sua hospedagem</h4>
+        <ul>
+            <li>[ ] Site simples, sem WordPress? → <strong>Netlify (grátis)</strong></li>
+            <li>[ ] Cliente quer e-mail profissional? → <strong>Hostinger (R$ 9,99/mês)</strong></li>
+            <li>[ ] Cliente já tem hospedagem? → Peça acesso FTP e envie os arquivos</li>
+        </ul>
+    </div>
+
+    <div class="summary">
+        <h4>🎯 RESUMO RÁPIDO — CAPÍTULO 4</h4>
+        <ul>
+            <li><strong>Hospedagem é onde seu site “mora” na internet</strong> — sem ela, ninguém acessa.</li>
+            <li>Use <strong>Netlify para sites estáticos (grátis)</strong> ou <strong>Hostinger para WordPress (barato)</strong>.</li>
+            <li>Envie arquivos via <strong>arrastar e soltar (Netlify)</strong> ou <strong>FTP (Hostinger)</strong>.</li>
+        </ul>
+    </div>
+
+    <h2>🔗 CAPÍTULO 5 — Conectando um Domínio</h2>
+    <h3>O que é domínio e DNS?</h3>
+    <p><strong>Domínio</strong> = Endereço do site (ex: www.confeitariadonamarta.com.br)<br>
+    <strong>DNS</strong> = Sistema que liga o domínio à hospedagem (como um GPS da internet)</p>
+    <p>Sem configurar o DNS, o domínio não “aponta” para o site.</p>
+
+    <h3>Onde registrar (exemplos)</h3>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Tipo</th>
+                <th>Onde registrar</th>
+                <th>Preço médio/ano</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>.com.br</td>
+                <td><a href="https://registro.br" target="_blank">Registro.br</a></td>
+                <td>R$ 40,00</td>
+            </tr>
+            <tr>
+                <td>.com</td>
+                <td><a href="https://br.godaddy.com" target="_blank">GoDaddy</a></td>
+                <td>R$ 60,00</td>
+            </tr>
+            <tr>
+                <td>.store / .site</td>
+                <td>Namecheap, Hostinger</td>
+                <td>R$ 20,00</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="tip">
+        <strong>💡 Dica:</strong> Para clientes brasileiros, use <strong>.com.br</strong> — passa mais credibilidade.
+    </div>
+
+    <h3>Tutorial: como apontar o domínio para a hospedagem</h3>
+    <h4>Exemplo com Registro.br + Netlify</h4>
+    <ol>
+        <li>Compre o domínio em registro.br (ex: meusite.com.br)</li>
+        <li>No painel do Registro.br, vá em “Gerenciar DNS”</li>
+        <li>Apague todos os registros atuais</li>
+        <li>Adicione 2 registros do tipo “A”:
+            <pre>
+Nome: @  
+Valor: 75.2.63.234 (IP do Netlify — confira no seu painel Netlify)
+
+Nome: www  
+Valor: 75.2.63.234</pre>
+        </li>
+        <li>Salve. Pronto!</li>
+    </ol>
+
+    <div class="warning">
+        <strong>⏱️ Tempo de propagação:</strong> de 1 minuto a 48 horas (geralmente 5 minutos no Registro.br).
+    </div>
+
+    <h3>Tempo de propagação do DNS</h3>
+    <ul>
+        <li><strong>Registro.br</strong>: 5 minutos a 1 hora</li>
+        <li><strong>GoDaddy</strong>: 1 a 24 horas</li>
+        <li><strong>Namecheap</strong>: 30 minutos a 6 horas</li>
+    </ul>
+
+    <div class="tip">
+        <strong>✅ Dica:</strong> Depois de configurar, teste em <a href="https://www.whatsmydns.net" target="_blank">whatsmydns.net</a> — digite o domínio e veja se o IP já está atualizado globalmente.
+    </div>
+
+    <div class="checklist">
+        <h4>✅ Checklist: Conexão de domínio</h4>
+        <ul>
+            <li>[ ] Domínio registrado e pago</li>
+            <li>[ ] Acessou painel DNS do registrador</li>
+            <li>[ ] Apagou registros antigos</li>
+            <li>[ ] Adicionou registros “A” apontando para o IP da hospedagem</li>
+            <li>[ ] Testou em whatsmydns.net</li>
+        </ul>
+    </div>
+
+    <div class="summary">
+        <h4>🎯 RESUMO RÁPIDO — CAPÍTULO 5</h4>
+        <ul>
+            <li><strong>Domínio é o endereço</strong> — compre em Registro.br ou GoDaddy.</li>
+            <li><strong>DNS é o “GPS”</strong> — aponte para o IP da sua hospedagem.</li>
+            <li><strong>Propagação leva até 48h</strong> — mas geralmente é rápido (teste em whatsmydns.net).</li>
+        </ul>
+    </div>
+
+    <h2>📦 CAPÍTULO 6 — Preparando a Entrega para o Cliente</h2>
+    <h3>Checklist antes da entrega</h3>
+    <div class="checklist">
+        <ul>
+            <li>✅ Site revisado (sem erros de português)</li>
+            <li>✅ Versão mobile testada (abrir no celular)</li>
+            <li>✅ Todos os links funcionando (WhatsApp, formulário, redes sociais)</li>
+            <li>✅ Imagens carregando rápido (use TinyPNG para comprimir)</li>
+            <li>✅ SEO básico: título da página e descrição (no Wix/WordPress é fácil)</li>
+            <li>✅ Formulário de contato testado (envie um teste para você mesmo)</li>
+        </ul>
+    </div>
+
+    <div class="warning">
+        <strong>⚠️ Nunca entregue sem testar no celular</strong> — 70% dos acessos são mobile!
+    </div>
+
+    <h3>Como organizar os acessos para o cliente</h3>
+    <p>Crie um documento simples (Google Docs ou PDF) com:</p>
+    <pre>
+🔑 ACESSOS DO SEU SITE
+
+🌐 Domínio: www.seusite.com.br  
+💻 Hospedagem: Netlify (login: email@cliente.com / senha: XXX)  
+🛠️ Painel Wix/WordPress: link + usuário + senha  
+📧 E-mail profissional (se tiver): contato@seusite.com.br (senha: XXX)
+
+📌 IMPORTANTE: Guarde essas senhas em local seguro. Recomendo usar o Bitwarden (grátis).</pre>
+
+    <div class="tip">
+        <strong>💡 Dica:</strong> Ofereça treinamento de 15 minutos por Zoom para ensinar a editar textos e fotos.
+    </div>
+
+    <h3>Modelo de entrega + manual rápido para o cliente</h3>
+    <div class="script">
+        <p><strong>Assunto do e-mail:</strong> 🎉 Seu site está NO AR! + Manual de uso</p>
+        <p>Olá [Nome],</p>
+        <p>Seu site está publicado e funcionando perfeitamente! 🚀</p>
+        <p>Acesse agora: [LINK DO SITE]</p>
+        <p>Anexei:<br>
+        ✅ Manual rápido (como editar textos e fotos)<br>
+        ✅ Lista de acessos (domínio, hospedagem, painel)<br>
+        ✅ Checklist de divulgação (o que fazer agora para atrair clientes)</p>
+        <p>Agende aqui um treinamento de 15min por Zoom: [LINK DE AGENDA]</p>
+        <p>Precisa de algo? Só chamar!</p>
+        <p>Abraços,<br>
+        [Seu Nome]</p>
+    </div>
+
+    <div class="checklist">
+        <h4>✅ Checklist de entrega</h4>
+        <ul>
+            <li>[ ] Site revisado e testado</li>
+            <li>[ ] Versão mobile OK</li>
+            <li>[ ] Documento de acessos enviado</li>
+            <li>[ ] Manual rápido anexado</li>
+            <li>[ ] Link de agendamento para treinamento incluído</li>
+        </ul>
+    </div>
+
+    <div class="summary">
+        <h4>🎯 RESUMO RÁPIDO — CAPÍTULO 6</h4>
+        <ul>
+            <li><strong>Teste TUDO antes de entregar</strong> — principalmente no celular.</li>
+            <li><strong>Envie documento com todos os acessos</strong> — evita “esqueci a senha”.</li>
+            <li><strong>Inclua manual rápido + treinamento</strong> — deixa o cliente seguro e satisfeito.</li>
+        </ul>
+    </div>
+
+    <h2>💰 CAPÍTULO 7 — Como Vender o Site para Clientes</h2>
+    <h3>Estratégias de prospecção</h3>
+
+    <h4>1. WhatsApp (o mais eficaz)</h4>
+    <div class="script">
+        <p>“Oi [Nome], vi seu Instagram e amei seu trabalho!<br>
+        Notei que você ainda não tem um site profissional — isso pode estar fazendo você perder clientes que não salvam seu WhatsApp.<br>
+        Posso criar um site lindo e funcional pra você em 5 dias, por R$ 897 à vista.<br>
+        Quer ver um exemplo do que faria pra você? 😊”</p>
+    </div>
+
+    <h4>2. Instagram</h4>
+    <ul>
+        <li>Comente em posts de potenciais clientes:<br>
+        <em>“Lindo trabalho! Já pensou em ter um site só seu pra receber pedidos direto? Posso te ajudar 😉”</em></li>
+        <li>Stories com depoimentos:<br>
+        <em>“Mais um site entregue! 🎉 Dessa vez para a @confeitariaflor — agora ela recebe pedidos 24h! Quer o seu? Me chama!”</em></li>
+    </ul>
+
+    <h4>3. Indicações</h4>
+    <div class="script">
+        <p>“Adorei seu site! Quem fez?” → “Fui eu! 😊 Se conhecer alguém que precisa, manda aqui — dou 10% de desconto pra você!”</p>
+    </div>
+
+    <h3>Como precificar (3 modelos)</h3>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Modelo</th>
+                <th>Como funciona</th>
+                <th>Preço sugerido (pt-BR)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Preço fixo</strong></td>
+                <td>Site completo, entrega final</td>
+                <td>R$ 897 a R$ 2.500</td>
+            </tr>
+            <tr>
+                <td><strong>Pacotes</strong></td>
+                <td>Básico (R$ 697), Premium (R$ 1.297), Completo (R$ 1.997)</td>
+                <td>Crie 3 opções</td>
+            </tr>
+            <tr>
+                <td><strong>Recorrência</strong></td>
+                <td>Site + manutenção mensal</td>
+                <td>R$ 297/mês (site incluso na 1ª mensalidade)</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="tip">
+        <strong>💡 Dica:</strong> Ofereça <strong>Pix com 10% de desconto</strong> — fecha venda mais rápido.
+    </div>
+
+    <h3>Scripts de vendas (copie e cole!)</h3>
+
+    <h4>📱 WhatsApp (primeiro contato)</h4>
+    <div class="script">
+        <p>“Oi [Nome]! Tudo bem?<br>
+        Sou especialista em criar sites lindos e funcionais para [tipo de negócio] — tudo feito com inteligência artificial, então fica pronto em poucos dias e com preço justo.<br>
+        Vi seu trabalho e amei! Mas notei que você ainda não tem um site profissional — isso pode estar fazendo você perder clientes que não salvam seu WhatsApp ou não te encontram no Google.<br>
+        Posso criar um site completo pra você por R$ 897 à vista (com 10% OFF no Pix).<br>
+        Quer ver um exemplo do que faria pra você? É rapidinho 😊”</p>
+    </div>
+
+    <h4>✉️ E-mail (follow-up)</h4>
+    <div class="script">
+        <p><strong>Assunto:</strong> 🎯 Oportunidade para [Nome do Negócio] atrair mais clientes</p>
+        <p>Olá [Nome],</p>
+        <p>Me chamo [Seu Nome] e ajudo empreendedores como você a terem um site profissional — sem complicação, sem mensalidade alta, e entregue em até 5 dias.</p>
+        <p>Imagine:<br>
+        - Clientes encontrando você no Google<br>
+        - Pedidos entrando 24h por dia (mesmo quando você dorme)<br>
+        - Um cartão de visitas digital que impressiona</p>
+        <p>Posso criar isso pra você por R$ 897 à vista (Pix).</p>
+        <p>Quer ver um protótipo grátis do que faria pra você? Basta responder “QUERO VER” 😊</p>
+        <p>Abraços,<br>
+        [Seu Nome]<br>
+        [Seu WhatsApp]</p>
+    </div>
+
+    <h3>Como apresentar o site para impressionar</h3>
+    <ol>
+        <li>Crie uma <strong>versão de teste</strong> (em Netlify ou Wix) com o nome do cliente</li>
+        <li>Grave um <strong>vídeo de 1 minuto</strong> mostrando o site (use Loom ou tela do celular)</li>
+        <li>Envie com entusiasmo:<br>
+        <em>“Olha só o que preparei pra você! 🎉 Acesse: [LINK]<br>
+        É só um protótipo — posso ajustar cores, textos, fotos como quiser!”</em></li>
+    </ol>
+
+    <div class="tip">
+        <strong>✅ O segredo:</strong> <strong>entregar algo antes de fechar</strong> — cria urgência e emoção.
+    </div>
+
+    <h3>Como fechar contrato e receber pagamento</h3>
+
+    <h4>1. Contrato básico (use modelo do Capítulo 8)</h4>
+    <p>Inclua:<br>
+    - Descrição do serviço<br>
+    - Prazo de entrega<br>
+    - Forma de pagamento<br>
+    - Direitos autorais</p>
+
+    <h4>2. Pagamento</h4>
+    <ul>
+        <li><strong>Pix</strong> (à vista com desconto)</li>
+        <li><strong>PagSeguro</strong> (parcelado)</li>
+        <li><strong>Hotmart</strong> (se quiser vender como produto digital + automação)</li>
+    </ul>
+
+    <div class="tip">
+        <strong>💡 Dica:</strong> Use Hotmart se quiser escalar — lá você pode vender “pacotes de site” como produto digital, com checkout automático.
+    </div>
+
+    <div class="summary">
+        <h4>🎯 RESUMO RÁPIDO — CAPÍTULO 7</h4>
+        <ul>
+            <li><strong>Prospecção por WhatsApp e Instagram</strong> — seja direto e ofereça valor.</li>
+            <li><strong>Precificação em pacotes ou recorrência</strong> — aumenta ticket médio.</li>
+            <li><strong>Apresente protótipo antes de fechar</strong> — aumenta conversão em 80%.</li>
+        </ul>
+    </div>
+
+    <h2>📈 CAPÍTULO 8 — Pós-Venda e Escala</h2>
+    <h3>Como oferecer manutenção mensal</h3>
+    <div class="script">
+        <p>“Seu site está no ar! 🎉 Agora, para manter tudo atualizado, seguro e no topo do Google, ofereço um plano de manutenção por apenas R$ 97/mês. Inclui:<br>
+        - Atualizações de conteúdo (textos, fotos)<br>
+        - Backup semanal<br>
+        - Suporte prioritário por WhatsApp<br>
+        - Relatório mensal de visitas”</p>
+    </div>
+
+    <div class="tip">
+        <strong>✅ Venda como “seguro do site”</strong> — o cliente paga para não ter dor de cabeça.
+    </div>
+
+    <h3>Upsell: SEO, anúncios, redes sociais</h3>
+    <p>Depois de entregar o site, ofereça:</p>
+    <ul>
+        <li><strong>Pacote SEO</strong> (R$ 297/mês) — para aparecer no Google</li>
+        <li><strong>Pacote de anúncios</strong> (R$ 497/mês) — Meta Ads ou Google Ads</li>
+        <li><strong>Gestão de redes sociais</strong> (R$ 597/mês) — 8 posts + stories</li>
+    </ul>
+
+    <div class="tip">
+        <strong>💡 Dica:</strong> Use IA para gerar os posts e anúncios — seu custo operacional é quase zero.
+    </div>
+
+    <h3>Como transformar um cliente em divulgador</h3>
+    <ol>
+        <li>Peça depoimento em vídeo (ofereça R$ 50 de desconto na manutenção)</li>
+        <li>Peça indicação:<br>
+        <em>“Adoraria ajudar mais pessoas como você! Se conhecer alguém que precisa de site, me indica? Dou 10% de desconto pra você e pra ela 😊”</em></li>
+        <li>Ofereça programa de afiliados:<br>
+        <em>“Indique 3 clientes e ganhe seu site grátis!”</em></li>
+    </ol>
+
+    <div class="checklist">
+        <h4>✅ Checklist: Pós-venda</h4>
+        <ul>
+            <li>[ ] Enviou proposta de manutenção mensal</li>
+            <li>[ ] Ofereceu pacote de SEO ou anúncios</li>
+            <li>[ ] Pediu depoimento + indicação</li>
+            <li>[ ] Adicionou cliente em lista de e-mail (para ofertas futuras)</li>
+        </ul>
+    </div>
+
+    <div class="summary">
+        <h4>🎯 RESUMO RÁPIDO — CAPÍTULO 8</h4>
+        <ul>
+            <li><strong>Manutenção mensal por R$ 97</strong> — fideliza e gera renda recorrente.</li>
+            <li><strong>Upsell com SEO e anúncios</strong> — aumenta lucro sem aumentar esforço.</li>
+            <li><strong>Transforme clientes em divulgadores</strong> — marketing gratuito e poderoso.</li>
+        </ul>
+    </div>
+
+    <div class="page-break"></div>
+
+    <div class="bonus">
+        <h2>🎁 BÔNUS — Modelos Prontos + FAQs + Cronograma de 15 Dias</h2>
+
+        <h3>📄 MODELO 1: Proposta Simples (copie e cole)</h3>
+        <div class="model">
+            <p><strong>PROPOSTA COMERCIAL</strong></p>
+            <p>Cliente: [Nome do Cliente]<br>
+            Serviço: Criação de Site Profissional<br>
+            Prazo: 5 dias úteis após aprovação do conteúdo<br>
+            Investimento: R$ 897,00 (à vista via Pix)</p>
+            <p>O que inclui:<br>
+            ✅ Design moderno com IA<br>
+            ✅ 4 páginas (Home, Sobre, Serviços, Contato)<br>
+            ✅ Botão de WhatsApp + Formulário<br>
+            ✅ Versão mobile otimizada<br>
+            ✅ Domínio .com.br incluso<br>
+            ✅ Hospedagem por 1 ano<br>
+            ✅ Treinamento de 15min<br>
+            ✅ Manual de uso</p>
+            <p>Aceito? Responda “ACEITO” que começo hoje mesmo! 😊</p>
+        </div>
+
+        <h3>📜 MODELO 2: Contrato Básico (resumido)</h3>
+        <div class="model">
+            <p><strong>CONTRATO DE PRESTAÇÃO DE SERVIÇOS</strong></p>
+            <p>Partes: [Seu Nome] e [Cliente]<br>
+            Objeto: Criação de site profissional<br>
+            Prazo: 5 dias úteis após envio do conteúdo pelo cliente<br>
+            Valor: R$ 897,00 (Pix)<br>
+            Entrega: Link do site + acessos + manual<br>
+            Direitos: Cliente terá posse total do site após pagamento</p>
+            <p>Assinatura digital: Ambas as partes concordam ao enviar “CONCORDO” via WhatsApp.</p>
+        </div>
+
+        <h3>✅ MODELO 3: Checklist de Entrega</h3>
+        <div class="checklist">
+            <ul>
+                <li>☑ Site revisado (ortografia, links, imagens)</li>
+                <li>☑ Testado no celular (iOS e Android)</li>
+                <li>☑ Formulário de contato funcionando</li>
+                <li>☑ Botão do WhatsApp testado</li>
+                <li>☑ Domínio conectado e propagado</li>
+                <li>☑ Documento de acessos enviado</li>
+                <li>☑ Manual rápido anexado</li>
+                <li>☑ Link de agendamento para treinamento incluído</li>
+                <li>☑ Depoimento solicitado</li>
+                <li>☑ Upsell de manutenção oferecido</li>
+            </ul>
+        </div>
+
+        <h3>❓ 5 FAQs (respostas rápidas para dúvidas de clientes)</h3>
+        <div class="faq">
+            <p><strong>1. Quanto tempo leva para ficar pronto?</strong><br>
+            → Em média 5 dias após você me enviar as fotos e textos.</p>
+            <p><strong>2. Preciso pagar mensalidade?</strong><br>
+            → Não! O site é seu para sempre. Só paga se quiser manutenção opcional (R$ 97/mês).</p>
+            <p><strong>3. Posso editar o site depois?</strong><br>
+            → Sim! Te ensino em 15 minutos. É tão fácil quanto postar no Instagram.</p>
+            <p><strong>4. E se eu não gostar?</strong><br>
+            → Faço ajustes até você amar. Só entrego quando você aprovar 100%.</p>
+            <p><strong>5. Como faço para aparecer no Google?</strong><br>
+            → O site já vem otimizado. Para aparecer mais rápido, recomendo o pacote SEO (R$ 297/mês).</p>
+        </div>
+
+        <h3>🗓️ CRONOGRAMA SUGERIDO: DO CONTATO ATÉ A ENTREGA EM 15 DIAS</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Dia</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Primeiro contato + proposta enviada</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Cliente aceita → envia checklist de conteúdo</td>
+                </tr>
+                <tr>
+                    <td>3-4</td>
+                    <td>Cliente envia fotos/textos → você cria protótipo com IA</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Envia protótipo + agenda call de aprovação</td>
+                </tr>
+                <tr>
+                    <td>6-7</td>
+                    <td>Ajustes finos no site</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Hospeda + conecta domínio</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>Testa tudo (mobile, links, formulário)</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>Envia documento de acessos + manual</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>Agenda treinamento de 15min</td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>Cliente aprova → emite nota (opcional)</td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>Solicita depoimento + indicação</td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td>Oferece manutenção + pacote SEO</td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td>Fecha ciclo → começa com próximo cliente!</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="page-break"></div>
+
+    <div class="cta">
+        <h2>🎯 CONCLUSÃO — Próximos Passos e Dicas de Vendas</h2>
+        <p>Parabéns! 🎉 Você agora tem um <strong>manual completo para criar, hospedar e vender sites usando IA</strong> — mesmo começando do zero.</p>
+        <p>Mas lembre-se: <strong>conhecimento sem ação = zero resultado</strong>.</p>
+        <p>Seu próximo passo?</p>
+
+        <div class="checklist">
+            <h4>✅ HOJE MESMO:</h4>
+            <ol>
+                <li><strong>Crie suas contas</strong> (Wix, ChatGPT, Canva, Netlify)</li>
+                <li><strong>Monte seu portfólio</strong> — crie 3 sites fictícios (ex: “PetShop do Zé”, “Nutricionista Carla”)</li>
+                <li><strong>Escolha 5 clientes ideais</strong> — mande a mensagem de prospecção (use o script!)</li>
+                <li><strong>Feche sua primeira venda</strong> — mesmo por R$ 497. O importante é começar.</li>
+            </ol>
+        </div>
+
+        <h3>💡 DICAS FINAIS DE VENDAS:</h3>
+        <ul>
+            <li><strong>Não espere perfeição</strong> — entregue rápido, ajuste depois.</li>
+            <li><strong>Use IA para TUDO</strong> — desde propostas até posts de Instagram.</li>
+            <li><strong>Cobre antecipado</strong> — 50% no início, 50% na entrega.</li>
+            <li><strong>Peça indicação sempre</strong> — seu melhor vendedor é seu cliente satisfeito.</li>
+            <li><strong>Escale com recorrência</strong> — manutenção mensal é lucro garantido.</li>
+        </ul>
+
+        <p>🌟 <strong>Você não precisa ser expert. Só precisa começar.</strong><br>
+        A IA faz o trabalho pesado. Você só direciona, aprova e vende.<br>
+        O mercado está esperando por você.</p>
+        <h3>👉 Agora vai lá — e faça seu primeiro R$1.000 com sites!</h3>
+    </div>
+
+    <div class="footer">
+        <p>© 2024 Seu Especialista em IA + Vendas Digitais. Todos os direitos reservados.</p>
+        <p>Este material é para uso pessoal. Proibida a redistribuição sem autorização.</p>
+    </div>
+
+    <div class="no-print">
+        <p>✅ Para salvar como PDF: Pressione Ctrl+P (ou Cmd+P no Mac) e selecione "Salvar como PDF".</p>
+    </div>
+</body>
+</html>
