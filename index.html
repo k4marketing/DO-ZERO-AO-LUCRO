@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>DO ZERO AO LUCRO — Exclusivo</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👑</text></svg>">
   <meta name="description" content="Acesso exclusivo aos treinamentos premium e programa de afiliados com comissão de 35%." />
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@300;400;500&display=swap');
@@ -36,6 +37,7 @@
       padding: 60px 20px 80px;
       text-align: center;
       overflow: hidden;
+      transition: background-color 300ms ease;
     }
 
     .hero-overlay {
@@ -65,15 +67,17 @@
       text-transform: uppercase;
       letter-spacing: 1px;
       margin-bottom: 16px;
-      background: linear-gradient(to right, #fff, var(--gold));
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-      transition: background 300ms ease;
+      color: var(--white);
+      transition: color 300ms ease, background 300ms ease;
+      cursor: pointer;
     }
 
-    h1:hover {
-      background: linear-gradient(to right, var(--gold), #fff);
+    .header-gold {
+      background-color: var(--gold) !important;
+    }
+
+    .header-gold h1 {
+      color: var(--green-dark) !important;
     }
 
     .container {
@@ -182,10 +186,10 @@
   </style>
 </head>
 <body>
-  <header>
+  <header id="mainHeader">
     <div class="hero-overlay" aria-hidden="true"></div>
     <div class="header-content">
-      <h1>Exclusividade e Resultado</h1>
+      <h1 id="mainTitle">Exclusividade e Resultado</h1>
     </div>
   </header>
 
@@ -199,7 +203,7 @@
 
       <div class="card">
         <h2>DO ZERO AO LUCRO: Como Criar, Hospedar e Vender Sites com IA</h2>
-        <p>Treinamento completo com suporte.</p>
+        <p>Treinamento completo com certificação e suporte.</p>
         <a href="https://pay.kirvano.com/b2cfbe5c-5782-4c08-90fb-f7804b95e0fc" target="_blank" rel="noopener noreferrer" class="btn" aria-label="Comprar treinamento completo">Comprar</a>
       </div>
 
@@ -213,7 +217,32 @@
   </div>
 
   <footer>
-    <p>Tecnologia K4Marketing © 2025 — Todos os direitos reservados</p>
+    <p>Tecnologia Kirvano © 2025 — Todos os direitos reservados</p>
   </footer>
+
+  <script>
+    const header = document.getElementById('mainHeader');
+    const title = document.getElementById('mainTitle');
+
+    title.addEventListener('mouseenter', () => {
+      header.classList.add('header-gold');
+      title.style.background = 'linear-gradient(to right, var(--green-dark), var(--white))';
+      title.style.webkitBackgroundClip = 'text';
+      title.style.backgroundClip = 'text';
+      title.style.color = 'transparent';
+    });
+
+    title.addEventListener('mouseleave', () => {
+      // Remove o gradiente e restaura cor branca
+      title.style.background = '';
+      title.style.webkitBackgroundClip = '';
+      title.style.backgroundClip = '';
+      title.style.color = 'var(--white)';
+      // Remove classe dourada com pequeno delay para suavidade visual
+      setTimeout(() => {
+        header.classList.remove('header-gold');
+      }, 300);
+    });
+  </script>
 </body>
 </html>
